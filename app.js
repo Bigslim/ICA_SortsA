@@ -12,7 +12,7 @@ generateBtn.addEventListener('click', () => {
     // and to parse values
 	const numGroups = parseInt(numGroupsInput.value, 10);
     
-    // 
+    //  
 	if (!nameList || !numGroups || nameList.length < numGroups) {
 		alert('Please enter a valid list of names and number of groups.');
 		return;
