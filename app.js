@@ -1,10 +1,13 @@
+// read and interacts with the HTML elements refered
 const generateBtn = document.getElementById('generate-btn');
 const outputDiv = document.getElementById('output');
 
+// makes the button work as intended
 generateBtn.addEventListener('click', () => {
+    // makes the text area to be able to be fullfiled and interacts with the groups input
 	const nameListTextarea = document.getElementById('name-list');
 	const numGroupsInput = document.getElementById('num-groups');
-	const nameList = nameListTextarea.value.trim().split('\n');
+	const nameList = nameListTextarea.value.trim().split('\n').filter(name => name.trim() !== '');
 	const numGroups = parseInt(numGroupsInput.value, 10);
 
 	if (!nameList || !numGroups || nameList.length < numGroups) {
