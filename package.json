@@ -1,0 +1,32 @@
+{
+  "name": "ica_sortsa",
+  "version": "0.0.1",
+  "description": "Simple sorting application for ICA",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ICA_SortsA"
+  },
+  "keywords": [
+    "Sort",
+    "Team",
+    "Management",
+    "Randomizer",
+    "Cross-Platform",
+    "Integrated",
+    "Application",
+    "CPD",
+    "IAD",
+    "CCT",
+    "College",
+    "Dublin"
+  ],
+  "author": "Diego Francisco",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.2.0"
+  }
+}
