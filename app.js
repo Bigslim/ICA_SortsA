@@ -7,9 +7,12 @@ generateBtn.addEventListener('click', () => {
     // makes the text area to be able to be fullfiled and interacts with the groups input
 	const nameListTextarea = document.getElementById('name-list');
 	const numGroupsInput = document.getElementById('num-groups');
+    // functions to clear up blank space and ignore blank lines 
 	const nameList = nameListTextarea.value.trim().split('\n').filter(name => name.trim() !== '');
+    // and to parse values
 	const numGroups = parseInt(numGroupsInput.value, 10);
-
+    
+    // 
 	if (!nameList || !numGroups || nameList.length < numGroups) {
 		alert('Please enter a valid list of names and number of groups.');
 		return;
