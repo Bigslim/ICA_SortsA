@@ -25,11 +25,11 @@ generateBtn.addEventListener('click', () => {
 	outputDiv.innerHTML = generateOutputHtml(groups);
 
 	// to write the output into a file
-	const fs = require('fs');
-	fs.writeFile('groups.html', outputHtml, (err) => {
-		if (err) throw err;
-		console.log('file saved!');
-	});
+	const fileData = new Blob([outputHtml], {type: 'text/html'});
+	const downloadLink = document.createElement('a');
+	downloadLink.href = URL.createObjectURL(fileData);
+	downloadLink.download = 'groups.html';
+	downloadLink.click();
 });
 
 // to display in the App
