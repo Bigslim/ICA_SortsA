@@ -7,20 +7,20 @@ function createWindow() {
 	const win = new BrowserWindow({
 		width: 1366,
 		height: 768,
-        // Node integration
+		// Node integration
 		webPreferences: {
 			nodeIntegration: true
 		}
 	});
-	
-    // method to load the HTML file into the window
-    win.loadFile('index.html');
+
+	// method to load the HTML file into the window
+	win.loadFile('index.html');
 }
 
 // method to wait the app to be ready and calling of the function to create the window
 app.whenReady().then(() => {
 	createWindow();
-    
+
 	app.on('activate', () => {
 		if (BrowserWindow.getAllWindows().length === 0) {
 			createWindow();
@@ -30,7 +30,7 @@ app.whenReady().then(() => {
 
 // close the windows
 app.on('window-all-closed', () => {
-    // note that MacOS systems, "closing a window" don't terminate the program, to do so you have to use specific commands and paths
+	// note that MacOS systems, "closing a window" don't terminate the program, to do so you have to use specific commands and paths
 	if (process.platform !== 'darwin') {
 		app.quit();
 	}
