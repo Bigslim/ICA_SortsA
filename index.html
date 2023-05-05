@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="Diego Francisco" />
-    <meta name="description" content="This application can perform simple sorting of groups." />
+	<meta name="description" content="This application can perform simple sorting of groups." />
 	<title>Sorts Alpha</title>
-    <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" -->
+	<!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" -->
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<div class="container">
 		<h1>Sorts</h1>
@@ -20,13 +22,14 @@
 			<br>
 			<div class="form-group">
 				<label for="num-groups">Number of Groups</label>
-				<input type="number" id="num-groups" name="num-groups" min="1" max="10" value="2">
+				<input type="number" id="num-groups" name="num-groups" min="1" max="10" value="1">
 			</div>
 			<br>
-			<button id="generate-btn" type="button">Generate Teams</button>
+			<button id="generate-btn" type="button"><span class="spinner"></span>Generate Teams</button>
 		</form>
 		<div id="output"></div>
 	</div>
 	<script src="app.js"></script>
 </body>
+
 </html>

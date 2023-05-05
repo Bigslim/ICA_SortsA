@@ -1,19 +1,19 @@
 .form-group {
 	display: flex;
 	flex-direction: column;
-  }
-  
-  label {
+}
+
+label {
 	font-weight: bold;
-  }
-  
-  .textarea-container {
+}
+
+.textarea-container {
 	display: flex;
 	align-items: center;
-  }
-  
-  textarea {
+}
+
+textarea {
 	padding: 10px;
 	border: 5px solid #ccc;
 	border-radius: 5px;
-  }
+}
