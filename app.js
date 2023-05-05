@@ -23,7 +23,17 @@ generateBtn.addEventListener('click', () => {
 	const shuffledList = shuffleArray(nameList);
 	const groups = divideArrayIntoGroups(shuffledList, numGroups);
 	outputDiv.innerHTML = generateOutputHtml(groups);
+
+	// to write the output into a file
+	const fs = require('fs');
+	fs.writeFile('groups.html', outputHtml, (err) => {
+		if (err) throw err;
+		console.log('file saved!');
+	});
 });
+
+// to display in the App
+outputDiv.innerHTML = outputHtml;
 
 // for shuffling the array
 function shuffleArray(array) {
