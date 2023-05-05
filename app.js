@@ -23,6 +23,8 @@ generateBtn.addEventListener('click', () => {
 	const shuffledList = shuffleArray(nameList);
 	const groups = divideArrayIntoGroups(shuffledList, numGroups);
 	outputDiv.innerHTML = generateOutputHtml(groups);
+	// to display in the App
+	outputDiv.innerHTML = outputHtml;
 
 	// to write the output into a file
 	const fileData = new Blob([outputHtml], {type: 'text/html'});
@@ -31,9 +33,6 @@ generateBtn.addEventListener('click', () => {
 	downloadLink.download = 'groups.html';
 	downloadLink.click();
 });
-
-// to display in the App
-outputDiv.innerHTML = outputHtml;
 
 // for shuffling the array
 function shuffleArray(array) {
