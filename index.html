@@ -17,12 +17,13 @@
 		<form>
 			<div class="form-group">
 				<label for="name-list">List of Names</label>
-				<textarea id="name-list" name="name-list" rows="10" cols="10"></textarea>
+				<textarea id="name-list" name="name-list" rows="10" cols="10" placeholder="Enter names, one per line"></textarea>
 			</div>
 			<br>
 			<div class="form-group">
 				<label for="num-groups">Number of Groups</label>
 				<input type="number" id="num-groups" name="num-groups" min="1" max="10" value="1">
+				<span class="error">Note that this version limit the number of groups to 10</span>
 			</div>
 			<br>
 			<button id="generate-btn" type="button"><span class="spinner"></span>Generate Teams</button>
