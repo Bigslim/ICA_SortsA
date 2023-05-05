@@ -26,12 +26,20 @@ generateBtn.addEventListener('click', () => {
 	// to display in the App
 	outputDiv.innerHTML = outputHtml;
 
-	// to write the output into a file
+	// to write the output into a file A
+	/*
 	const fileData = new Blob([outputHtml], {type: 'text/html'});
 	const downloadLink = document.createElement('a');
 	downloadLink.href = URL.createObjectURL(fileData);
 	downloadLink.download = 'groups.html';
 	downloadLink.click();
+	*/
+	// to write the output into a file B
+    const fs = require('fs');
+    fs.writeFile('groups.html', outputHtml, (err) => {
+        if (err) throw err;
+        console.log('File saved!');
+    });
 });
 
 // for shuffling the array
