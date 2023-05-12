@@ -1,6 +1,8 @@
 // read and interacts with the HTML elements refered
 const generateBtn = document.getElementById('generate-btn');
 const outputDiv = document.getElementById('output');
+// a listener has to be added to save the generated groups. How? PDF, HTML, pain text?
+const saveBtn = document.getElementById('save-btn');
 
 // makes the button work as intended
 generateBtn.addEventListener('click', () => {
@@ -18,6 +20,7 @@ generateBtn.addEventListener('click', () => {
 		alert('Please enter a valid list of names and number of groups.');
 		return;
 	}
+
 
 	// call the functions created below
 	const shuffledList = shuffleArray(nameList);
