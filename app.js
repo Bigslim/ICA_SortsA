@@ -34,15 +34,14 @@ generateBtn.addEventListener('click', () => {
 	downloadLink.download = 'groups.html';
 	downloadLink.click();
 	*/
-
 	// to write the output into a file B
-	
+	/*
 	const fs = require('fs');
 	fs.writeFile('groups.html', outputHtml, (err) => {
 		if (err) throw err;
 		console.log('File saved!');
 	});
-	
+	*/
 });
 
 // for shuffling the array
