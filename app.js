@@ -25,7 +25,7 @@ generateBtn.addEventListener('click', () => {
   const nameList = nameListTextarea.value.trim().split('\n').filter(name => name.trim() !== '');
   // parse and limit values on the selector
   const numGroups = parseInt(numGroupsInput.value, 10);
-  // simple validation for this version
+  // simple validation and feedback for this version
   if (!nameList || !numGroups || nameList.length < numGroups) {
     alert('Please enter a valid list of names and number of groups.');
     return;
@@ -41,19 +41,25 @@ generateBtn.addEventListener('click', () => {
 
 // event listener for the Save Teams button
 saveBtn.addEventListener('click', () => {
+  // simple validation and feedback for "misclicks"
   if (!groups) {
     alert('Please generate teams first.');
     return;
   }
-
+  // outputing text
   const generatedOutput = generateOutputText(groups);
 
-  const downloadLink = document.createElement('a');
-  downloadLink.href = generateOutputUrl(generatedOutput);
-  downloadLink.download = 'teams';
-  downloadLink.click();
+  /**
+   * triggering the click event to interact with the host file system,
+   * in other words save/download the generated .txt on your computer
+   */
+  const downloadLink = document.createElement('a'); // it holds the file till download
+  downloadLink.href = generateOutputUrl(generatedOutput); // create the link
+  downloadLink.download = 'teams'; // default naming
+  downloadLink.click(); // download it
 });
 
+// to shuffle using Fisher-Yeates algorithm*
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -62,6 +68,7 @@ function shuffleArray(array) {
   return array;
 }
 
+// to divide the arrays preferably equally
 function divideArrayIntoGroups(array, numGroups) {
   const groups = Array(numGroups).fill().map(() => []);
   let currentGroupIndex = 0;
@@ -72,6 +79,11 @@ function divideArrayIntoGroups(array, numGroups) {
   return groups;
 }
 
+/**
+ * the following functions will be called by the listeners above 
+ */
+
+// to display the groups in the app
 function generateOutputHtml(groups) {
   let html = '';
   for (let i = 0; i < groups.length; i++) {
@@ -85,6 +97,7 @@ function generateOutputHtml(groups) {
   return html;
 }
 
+// to genarate a text file
 function generateOutputText(groups) {
   let text = '';
   for (let i = 0; i < groups.length; i++) {
@@ -97,6 +110,7 @@ function generateOutputText(groups) {
   return text;
 }
 
+// to generate a data URL to be downloaded
 function generateOutputUrl(outputText) {
   const encodedOutput = encodeURIComponent(outputText);
   const dataUrl = `data:text/plain;charset=utf-8,${encodedOutput}`;
