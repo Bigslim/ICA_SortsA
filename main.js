@@ -1,3 +1,4 @@
+'use strict'
 // required modules
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
