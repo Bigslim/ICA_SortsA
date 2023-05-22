@@ -28,6 +28,10 @@ npm start
 
 4. You can now use it to generate and save teams based on your list of names.
 
+5. You can also try the Windows Version with installer:
+
+available on: https://1drv.ms/u/s!Ap2i58HqQJ4ekK8Dh0k0ykOTw3ZDJg?e=Js6zby
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Make sure to follow the existing coding style and guidelines.
