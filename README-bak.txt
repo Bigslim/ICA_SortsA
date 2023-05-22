@@ -30,7 +30,7 @@ npm start
 
 5. You can also try the Windows Version with installer:
 
-available on: https://1drv.ms/u/s!Ap2i58HqQJ4ekK8Dh0k0ykOTw3ZDJg?e=Js6zby
+available on: https://1drv.ms/u/s!Ap2i58HqQJ4ek-ENYbIKpdo3fzCZNg?e=6qTAby
 
 ## Contributing
 
