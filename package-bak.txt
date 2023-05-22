@@ -1,0 +1,37 @@
+{
+  "name": "ica_sortsa",
+  "version": "0.0.1",
+  "description": "Simple sorting application for ICA",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "ICA_SortsA"
+  },
+  "keywords": [
+    "Sort",
+    "Team",
+    "Management",
+    "Randomizer",
+    "Cross-Platform",
+    "Integrated",
+    "Application",
+    "CPD",
+    "IAD",
+    "CCT",
+    "College",
+    "Dublin"
+  ],
+  "author": "Diego Francisco",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.2.0",
+    "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha3"
+  }
+}
